@@ -1,4 +1,5 @@
 <?php
+// Uses Bootstrap's Cards: https://getbootstrap.com/docs/4.0/components/card/
 // This was designed to be semi-static, so it's in this file,
 // but the array can be moved to another file and then just require() this.
 // Use "$featuredcardsonly = true;" to only show cards marked as featured.
