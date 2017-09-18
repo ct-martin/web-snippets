@@ -1,5 +1,6 @@
 <?php
 // A Bootstrap v4 carousel template
+// https://getbootstrap.com/docs/4.0/components/carousel/
 /* Syntax:
 $gallery = array(
     array(
