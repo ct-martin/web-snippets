@@ -5,11 +5,12 @@
 // Use "$featuredcardsonly = true;" to only show cards marked as featured.
 $cards = array(
     array(
-        'name' => 'Card Title',
-        'url' => '/somewhere',
-        'desc' => 'description',
-        'img' => 'url to image',
-        'imgalt' => 'alt text for image',
+        'name' => 'Required, Card Title',
+        'url' => '/somewhere', // required
+        'desc' => 'required, description',
+        'img' => 'optional, url to image',
+        'imgalt' => 'optional, alt text for image',
+        'tag' => 'optional, adds a tag to the card title',
         'header' => 'optional, adds a header to the card',
         'featured' => true // optional, marks as featured
 );
@@ -30,7 +31,7 @@ foreach ($cards as $card) {
                                     <img class="card-img-top" src="<?php if(isset($card["img"]) && $card["img"]!="") echo($card["img"]); ?>"<?php echo((isset($card["imgalt"]) && $card["imgalt"]!="") ? " alt=\"" . $card["imgalt"] . "\"" : ""); ?> style="width:90%;margin:5%;">
                                 <?php } ?>
                                     <div class="card-body">
-                                        <h4 class="card-title"><?php echo($card["name"]); ?></h4>
+                                        <h4 class="card-title"><?php echo($work["name"]); if(isset($work["tag"]) && $work["tag"]) echo(" <small><span class=\"badge badge-secondary\">".$work["tag"]."</span></small>"); ?></h4>
                                         <p class="card-text"><?php echo($card["desc"]); ?></p>
                                         <a href="<?php echo($card["url"]); ?>" class="btn btn-primary w-100">See Project</a>
                                     </div>
