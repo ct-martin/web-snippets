@@ -36,7 +36,7 @@ curl_close($ch);
 
 // Generate RSS Feed
 
-// Do NOT add a newline at the start of this echo
+// Do NOT add a newline at the start of this echo (W3C Validator flips out)
 echo('<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
